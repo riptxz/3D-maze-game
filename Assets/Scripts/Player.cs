@@ -34,5 +34,17 @@ public class Player : MonoBehaviour
         }
 
         rb.linearVelocity = new Vector3(vel.x, rb.linearVelocity.y, vel.z);
+
+        
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            
+        }
+    }
+
+
 } 
