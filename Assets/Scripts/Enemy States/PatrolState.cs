@@ -10,6 +10,7 @@ public class PatrolState : EnemyState
     public override void Enter()
     {
         base.Enter();
+        GoToNextPoint();
         Debug.Log("Patrolling");
     }
 
@@ -20,10 +21,15 @@ public class PatrolState : EnemyState
             GoToNextPoint();
         }
 
-       // if(Vector3.Distance(enemy.enemyPos, enemy.playerPos))
-      //  {
+        if (Vector3.Distance(enemy.NavAgent.destination, enemy.playerPos.position) <= 30f)
+        {
+            sm.ChangeState(sm.chaseState);
+        }
 
-       // }
+        // if(Vector3.Distance(enemy.enemyPos, enemy.playerPos))
+        //  {
+
+        // }
     }
 
     public void GoToNextPoint()

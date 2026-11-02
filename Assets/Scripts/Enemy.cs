@@ -6,8 +6,9 @@ public class Enemy : MonoBehaviour
     EnemyStateMachine sm;
 
     public Transform[] points;
-    public Vector3 playerPos;
-    public Vector3 enemyPos;
+
+    public Transform enemyPos;
+    public Transform playerPos;
 
     public NavMeshAgent NavAgent;
 
